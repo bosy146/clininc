@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
 
 public class gym extends AppCompatActivity {
@@ -15,5 +16,12 @@ public class gym extends AppCompatActivity {
         Intent intent=getIntent();
         //String result=intent.getStringExtra("name");
         //Toast.makeText(gym.this,result,Toast.LENGTH_LONG).show();
+    }
+
+
+
+    public void bookat(View view) {
+        Intent in = new Intent ( this, gymb.class );
+        startActivity ( in );
     }
 }

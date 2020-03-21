@@ -79,13 +79,13 @@ public class Register extends AppCompatActivity {
 
             }
         } );
-//        siedit.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent in = new Intent(Register.this, Home.class);
-//                startActivity(in);
-//            }
-//        });
+       siedit.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View view) {
+                Intent in = new Intent(Register.this, Home.class);
+                startActivity(in);
+            }
+     });
     }
 }
 

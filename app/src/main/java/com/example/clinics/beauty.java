@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
 
 public class beauty extends AppCompatActivity {
@@ -15,5 +16,10 @@ public class beauty extends AppCompatActivity {
         Intent intent=getIntent();
        // String result=intent.getStringExtra("name");
         //Toast.makeText(beauty.this,result,Toast.LENGTH_LONG).show();
+    }
+
+    public void bookat(View view) {
+        Intent in = new Intent ( this, beautyb.class );
+        startActivity ( in );
     }
 }

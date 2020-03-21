@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 public class x_ray extends AppCompatActivity {
 
@@ -12,5 +13,10 @@ public class x_ray extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_x_ray);
         Intent intent=getIntent();
+    }
+
+    public void bookat(View view) {
+        Intent in = new Intent ( this, x_rayb.class );
+        startActivity ( in );
     }
 }

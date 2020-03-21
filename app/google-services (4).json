@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "505473912394",
+    "firebase_url": "https://clinics-1de69.firebaseio.com",
+    "project_id": "clinics-1de69",
+    "storage_bucket": "clinics-1de69.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:505473912394:android:bac0a6cfe7144a235060b3",
+        "android_client_info": {
+          "package_name": "com.example.clinics"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "505473912394-lv5k739oapm7v01u1s87d5eemutobfhd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.clinics",
+            "certificate_hash": "1995a66b6c347be587ab47f06e71f78679a10be2"
+          }
+        },
+        {
+          "client_id": "505473912394-q2jrua7tq08cfo27ih1pbbla2hu5tvua.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWf22JxYCmNzATF-lQzX4QcyIV97vXeXU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "505473912394-q2jrua7tq08cfo27ih1pbbla2hu5tvua.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
