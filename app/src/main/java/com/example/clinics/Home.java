@@ -11,9 +11,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.ArrayList;
 
-import butterknife.OnClick;
-
-public class login extends AppCompatActivity {
+public class Home extends AppCompatActivity {
     private RecyclerView mRecyclerView;
 
     private wordadapter mAdapter;
@@ -28,7 +26,7 @@ public class login extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate ( savedInstanceState );
-        setContentView ( R.layout.activity_login );
+        setContentView ( R.layout.activity_home );
         CreateArrayList ();
         mRecyclerView = findViewById ( R.id.recyclerView );
         mlayoutManager = new LinearLayoutManager ( this );
@@ -40,27 +38,27 @@ public class login extends AppCompatActivity {
             @Override
             public void onItemClick(int position) {
                 String list1 = list.get ( position ).getmTextV1 ();
-//                Intent in = new Intent ( login.this, Detalis.class );
+//                Intent in = new Intent ( Home.this, Detalis.class );
 //                in.putExtra ( "name", list1 );
 //                startActivity ( in );
 
                 // هنا هتدخلى على الصفحات حسب ال position فى ال list
                 switch (position) {
                     case 0:
-                        startActivity ( new Intent ( login.this, gym.class ) );
+                        startActivity ( new Intent ( Home.this, gym.class ) );
                         break;
 
                     case 1:
-                        startActivity ( new Intent ( login.this, beauty.class ) );
+                        startActivity ( new Intent ( Home.this, beauty.class ) );
                         break;
                     case 2:
-                        startActivity ( new Intent ( login.this, clinics.class ) );
+                        startActivity ( new Intent ( Home.this, clinics.class ) );
                         break;
                     case 3:
-                        startActivity ( new Intent ( login.this, x_ray.class ) );
+                        startActivity ( new Intent ( Home.this, x_ray.class ) );
                         break;
                     case 4:
-                        startActivity ( new Intent ( login.this, products.class ) );
+                        startActivity ( new Intent ( Home.this, products.class ) );
                         break;
                 }
             }

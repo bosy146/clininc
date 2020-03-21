@@ -15,19 +15,18 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class Main2Activity extends AppCompatActivity {
+public class Login extends AppCompatActivity {
     EditText emtaxt, password;
     TextView signup, singinedit;
     FirebaseAuth mFirebaseAuth;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.activity_login );
         mFirebaseAuth = FirebaseAuth.getInstance();
-        emtaxt = findViewById(R.id.emText);
-        password = findViewById(R.id.password2);
+        emtaxt = findViewById(R.id.activity_login_ed_email);
+        password = findViewById(R.id.activity_login_ed_password );
         signup = findViewById(R.id.signup);
         singinedit = findViewById(R.id.singinedit);
         signup.setOnClickListener(new View.OnClickListener() {
@@ -42,35 +41,36 @@ public class Main2Activity extends AppCompatActivity {
                     password.setError("please enter your password");
                     password.requestFocus();
                 } else if (email.isEmpty() && pwd.isEmpty()) {
-                    Toast.makeText(Main2Activity.this, "Fieldes Are Empty!", Toast.LENGTH_LONG).show();
+                    Toast.makeText( Login.this, "Fieldes Are Empty!", Toast.LENGTH_LONG).show();
                 } else if (!(email.isEmpty() && pwd.isEmpty())) {
-                    mFirebaseAuth.createUserWithEmailAndPassword(email, pwd).addOnCompleteListener(Main2Activity.this, new OnCompleteListener<AuthResult>() {
+                    mFirebaseAuth.createUserWithEmailAndPassword(email, pwd).addOnCompleteListener( Login.this, new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (!task.isSuccessful()) {
-                                Toast.makeText(Main2Activity.this, "SignUp Unsuccessful ", Toast.LENGTH_LONG).show();
+                                Toast.makeText( Login.this, "SignUp Unsuccessful ", Toast.LENGTH_LONG).show();
+
                             } else {
-                                startActivity(new Intent(Main2Activity.this, login.class));
+                                startActivity(new Intent( Login.this, Home.class));
                             }
                         }
                     });
                 } else {
-                    Toast.makeText(Main2Activity.this, "Error Ocurred!", Toast.LENGTH_LONG);
+                    Toast.makeText( Login.this, "Error Ocurred!", Toast.LENGTH_LONG);
 
                 }
             }
         });
-        signup.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent in = new Intent(Main2Activity.this, login.class);
-                startActivity(in);
-            }
-        });
+//        signup.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent in = new Intent( Login.this, Home.class);
+//                startActivity(in);
+//            }
+//        });
         singinedit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent in = new Intent(Main2Activity.this, sigin.class);
+                Intent in = new Intent( Login.this, Register.class);
                 startActivity(in);
 
             }

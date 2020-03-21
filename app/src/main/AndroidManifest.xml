@@ -16,10 +16,10 @@
         <activity android:name=".clinics" />
         <activity android:name=".gym" />
         <activity android:name=".beauty" />
-        <activity android:name=".sigin" />
-        <activity android:name=".Main2Activity" />
-        <activity android:name=".login" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".Register" />
+        <activity android:name=".Login" />
+        <activity android:name=".Home" />
+        <activity android:name=".Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

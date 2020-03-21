@@ -6,10 +6,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/purpl"
-    tools:context=".sigin">
+    tools:context=".Register">
 
     <EditText
-        android:id="@+id/nameText"
+        android:id="@+id/activity_register_ed_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="204dp"
@@ -21,6 +21,7 @@
         android:inputType="textPersonName"
         android:layoutDirection="rtl"
         android:padding="8dp"
+        android:text="test1"
         android:textColor="#070707"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -42,13 +43,14 @@
         android:inputType="phone"
         android:layoutDirection="rtl"
         android:padding="8dp"
+        android:text="01000"
         android:textAlignment="textEnd"
         android:textColor="#0F0F0F"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nameText" />
+        app:layout_constraintTop_toBottomOf="@+id/activity_register_ed_name" />
 
     <TextView
         android:id="@+id/textView2"
@@ -87,12 +89,13 @@
         android:inputType="textEmailAddress"
         android:layoutDirection="rtl"
         android:padding="8dp"
+        android:text="test_@gmail.com"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/phText" />
 
     <EditText
-        android:id="@+id/password2"
+        android:id="@+id/activity_register_ed_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
@@ -104,6 +107,7 @@
         android:inputType="textPassword"
         android:layoutDirection="rtl"
         android:padding="8dp"
+        android:text="123456"
         android:textAlignment="textEnd"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -127,7 +131,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password2"
+        app:layout_constraintTop_toBottomOf="@+id/activity_register_ed_password"
         app:layout_constraintVertical_bias="1.0" />
 
     <ProgressBar
