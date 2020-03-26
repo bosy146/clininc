@@ -16,6 +16,7 @@ import java.util.List;
 
 public class gymb extends AppCompatActivity {
     Spinner spinnerg;
+    Spinner spinnerh;
 
 
     @Override

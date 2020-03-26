@@ -6,4 +6,26 @@
     android:layout_height="match_parent"
     tools:context=".beautyb">
 
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="357dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="24dp"
+        android:text="اختيار اليوم"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinner3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="1dp"
+        android:entries="@array/Days"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
 </androidx.constraintlayout.widget.ConstraintLayout>

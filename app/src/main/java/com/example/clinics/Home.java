@@ -13,10 +13,8 @@ import java.util.ArrayList;
 
 public class Home extends AppCompatActivity {
     private RecyclerView mRecyclerView;
-
     private wordadapter mAdapter;
     private LinearLayoutManager mlayoutManager;
-
     private ArrayList<wordclass> list;
     FirebaseAuth mFirebaseAuth;
     private FirebaseAuth.AuthStateListener mAuthStateListener;
@@ -52,7 +50,7 @@ public class Home extends AppCompatActivity {
                         startActivity ( new Intent ( Home.this, beauty.class ) );
                         break;
                     case 2:
-                        startActivity ( new Intent ( Home.this, clinics.class ) );
+                        startActivity ( new Intent ( Home.this, c.class ) );
                         break;
                     case 3:
                         startActivity ( new Intent ( Home.this, x_ray.class ) );
@@ -67,11 +65,11 @@ public class Home extends AppCompatActivity {
 
     public void CreateArrayList() {
         list = new ArrayList<> ();
-        list.add ( new wordclass ( R.drawable.heart, "منتجع صحى و صاله العاب رياضيه", "1" ) );
+        list.add ( new wordclass ( R.drawable.gb, "منتجع صحى و صاله العاب رياضيه", "1" ) );
         list.add ( new wordclass ( R.drawable.b, "مركز تجميل", "2" ) );
-        list.add ( new wordclass ( R.drawable.doctor, "العيادات", "3" ) );
-        list.add ( new wordclass ( R.drawable.skeleton, "مركز اشاعات", "4" ) );
-        list.add ( new wordclass ( R.drawable.fruit, "منتجات طبيعيه", "5" ) );
+        list.add ( new wordclass ( R.drawable.cli, "العيادات", "3" ) );
+        list.add ( new wordclass ( R.drawable.x_ray, "مركز اشاعات", "4" ) );
+        list.add ( new wordclass ( R.drawable.natul, "منتجات طبيعيه", "5" ) );
        // list.add ( new wordclass ( R.drawable.baby, "ساحه اطفال", "6" ) );
         //list.add ( new wordclass ( R.drawable.mug, "كافيتريا", "7" ) );
     }

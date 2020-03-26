@@ -5,19 +5,18 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Toast;
 
-public class clinics extends AppCompatActivity {
+public class Eat extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_clinics);
+        setContentView(R.layout.activity_eat);
         Intent intent=getIntent();
-        //String result=intent.getStringExtra("name");
-      //  Toast.makeText(clinics.this,result,Toast.LENGTH_LONG).show();
     }
 
-
+    public void click(View view) {
+        Intent in = new Intent( Eat.this, Click.class);
+        startActivity(in);
     }
-
+}

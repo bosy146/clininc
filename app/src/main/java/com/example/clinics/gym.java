@@ -7,6 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+import com.example.clinics.R;
+import com.example.clinics.gymb;
+
 public class gym extends AppCompatActivity {
 
     @Override
