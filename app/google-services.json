@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "659842220117",
+    "firebase_url": "https://clinics-d96f7.firebaseio.com",
+    "project_id": "clinics-d96f7",
+    "storage_bucket": "clinics-d96f7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:659842220117:android:32096c27481c29088094dc",
+        "android_client_info": {
+          "package_name": "com.example.clinics"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "659842220117-u251oupf1h0annb2lkklrckonm48mmh7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZa3y4BDqlEMASIJ6m8WhsmF5mf2zO2uY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "659842220117-u251oupf1h0annb2lkklrckonm48mmh7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

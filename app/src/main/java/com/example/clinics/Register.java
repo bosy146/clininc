@@ -69,7 +69,7 @@ public class Register extends AppCompatActivity {
                             startActivity ( new Intent ( getApplicationContext (), Login.class ) );
                         } else {
                             Toast.makeText ( Register.this, "Error! " + task.getException ().getMessage (), Toast.LENGTH_SHORT ).show ();
-                            Log.i ( "Error", "" + task.getException ().getMessage () );
+                            Log.i ( "----------", "" + task.getException ().getMessage () );
                         }
 
 
@@ -79,13 +79,13 @@ public class Register extends AppCompatActivity {
 
             }
         } );
-       siedit.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View view) {
-                Intent in = new Intent(Register.this, Home.class);
-                startActivity(in);
+        siedit.setOnClickListener ( new View.OnClickListener () {
+            @Override
+            public void onClick(View view) {
+                Intent in = new Intent ( Register.this, MainActivity.class );
+                startActivity ( in );
             }
-     });
+        } );
     }
 }
 

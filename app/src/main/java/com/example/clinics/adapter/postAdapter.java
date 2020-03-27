@@ -1,4 +1,4 @@
-package com.example.clinics;
+package com.example.clinics.adapter;
 
 
 import android.view.LayoutInflater;
@@ -9,6 +9,9 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.clinics.R;
+import com.example.clinics.postclass;
 
 import java.util.ArrayList;
 
@@ -27,7 +30,7 @@ public class postAdapter extends RecyclerView.Adapter<postAdapter.ViewHolder> {
 
         public ViewHolder(@NonNull View itemView, final OnItemClickListener plistener) {
             super(itemView);
-            pTextView = itemView.findViewById(R.id.pText);
+            pTextView = itemView.findViewById( R.id.pText);
            // deac = itemView.findViewById(R.id.deac);
             img = itemView.findViewById(R.id.img);
             itemView.setOnClickListener(new View.OnClickListener() {

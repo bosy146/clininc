@@ -1,4 +1,4 @@
-package com.example.clinics;
+package com.example.clinics.adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,6 +8,9 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.clinics.R;
+import com.example.clinics.wordclass;
 
 import java.util.ArrayList;
 
@@ -28,7 +31,7 @@ public class wordadapter extends RecyclerView.Adapter<wordadapter.WordViewHolder
 
         public WordViewHolder(@NonNull View itemView, final OnItemClickListener listener) {
             super(itemView);
-            mImageView=itemView.findViewById(R.id.imageView);
+            mImageView=itemView.findViewById( R.id.imageView);
             mTextView=itemView.findViewById(R.id.text);
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override

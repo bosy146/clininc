@@ -50,7 +50,7 @@ public class Login extends AppCompatActivity {
                                 Toast.makeText( Login.this, "SignUp Unsuccessful ", Toast.LENGTH_LONG).show();
 
                             } else {
-                                startActivity(new Intent( Login.this, Home.class));
+//                                startActivity(new Intent( Login.this, Home.class));
                             }
                         }
                     });

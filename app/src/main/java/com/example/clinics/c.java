@@ -7,9 +7,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 
-import java.util.ArrayList;
+import com.example.clinics.adapter.postAdapter;
 
-import butterknife.OnItemClick;
+import java.util.ArrayList;
 
 public class c extends AppCompatActivity {
     private RecyclerView pRecyclerView;
