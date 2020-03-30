@@ -8,12 +8,13 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.clinics.adapter.wordadapter;
+import com.example.clinics.beauty.beauty;
+import com.example.clinics.gym.gym;
 import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.ArrayList;

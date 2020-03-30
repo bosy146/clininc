@@ -1,10 +1,13 @@
-package com.example.clinics;
+package com.example.clinics.beauty;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+
+import com.example.clinics.Click;
+import com.example.clinics.R;
 
 public class Beautywo extends AppCompatActivity {
 

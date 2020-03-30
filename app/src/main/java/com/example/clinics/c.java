@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.example.clinics.adapter.postAdapter;
+import com.example.clinics.beauty.Beautywo;
 
 import java.util.ArrayList;
 

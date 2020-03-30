@@ -1,4 +1,4 @@
-package com.example.clinics;
+package com.example.clinics.gym;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,6 +10,8 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
+
+import com.example.clinics.R;
 
 import java.util.ArrayList;
 import java.util.List;

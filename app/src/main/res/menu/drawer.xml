@@ -1,29 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:title="General">
+    <item android:title="الرئيسية">
         <menu>
 
             <item
                 android:id="@+id/home"
                 android:icon="@drawable/ic_home_black_24dp"
-                android:title="Home" />
+                android:title="الرئيسية" />
             <item
                 android:id="@+id/another"
-                android:icon="@drawable/ic_group_add_black_24dp"
-                android:title="Another Menu" />
+                android:icon="@drawable/ic_chat_black_24dp"
+                android:title=" الدردشه" />
         </menu>
     </item>
-    <item android:title="Communication">
+    <item android:title="حول التطبيق">
         <menu>
 
             <item
                 android:id="@+id/home1"
-                android:icon="@drawable/ic_home_black_24dp"
-                android:title="Home" />
+                android:icon="@drawable/ic_share_black_24dp"
+                android:title="تقييم التطبيق" />
             <item
                 android:id="@+id/another1"
                 android:icon="@drawable/ic_group_add_black_24dp"
-                android:title="Another Menu" />
+                android:title=" مشاركه التطبيق
+" />
         </menu>
     </item>
 
