@@ -77,7 +77,7 @@ public class c extends AppCompatActivity {
         plist.add(new postclass(R.drawable.dentic,"الاسنان","من اهم العيادات"));
         plist.add(new postclass(R.drawable.skin,"العنايه بالبشره","من اهم العيادات"));
         plist.add(new postclass(R.drawable.eyes,"الرمد","من اهم العيادات"));
-        plist.add(new postclass(R.drawable.woman,"التجميل","من اهم العيادات"));
+        plist.add(new postclass(R.drawable.woman,"النساء","من اهم العيادات"));
         plist.add(new postclass(R.drawable.eat,"التغذيه","من اهم العيادات"));
         plist.add(new postclass(R.drawable.asab,"عظام","من اهم العيادات"));
         plist.add(new postclass(R.drawable.nose,"انف و اذن","من اهم العيادات"));
