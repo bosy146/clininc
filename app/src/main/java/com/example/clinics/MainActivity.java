@@ -10,7 +10,6 @@ import android.os.Bundle;
 
 import com.google.android.material.navigation.NavigationView;
 
-
 public class MainActivity extends AppCompatActivity {
     DrawerLayout drawerLayout;
     ActionBarDrawerToggle actionBarDrawerToggle;
@@ -34,6 +33,5 @@ public class MainActivity extends AppCompatActivity {
         actionBarDrawerToggle.syncState ();
 
         getSupportFragmentManager ().beginTransaction ().replace ( R.id.content_fragment, new Home () ).commit ();
-
     }
 }
