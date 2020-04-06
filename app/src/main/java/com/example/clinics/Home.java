@@ -15,7 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.clinics.adapter.wordadapter;
 import com.example.clinics.beauty.beauty;
 import com.example.clinics.gym.gym;
-import com.google.firebase.auth.FirebaseAuth;
+
 
 import java.util.ArrayList;
 
@@ -24,8 +24,7 @@ public class Home extends Fragment {
     private wordadapter mAdapter;
     private LinearLayoutManager mlayoutManager;
     private ArrayList<wordclass> list;
-    FirebaseAuth mFirebaseAuth;
-    private FirebaseAuth.AuthStateListener mAuthStateListener;
+
 
     /// hiiiiii 3/5
     ///bosy
@@ -76,11 +75,11 @@ public class Home extends Fragment {
 
     public void CreateArrayList() {
         list = new ArrayList<> ();
-        list.add ( new wordclass ( R.drawable.gb, "منتجع صحى و صاله العاب رياضيه", "1" ) );
-        list.add ( new wordclass ( R.drawable.b, "مركز تجميل", "2" ) );
-        list.add ( new wordclass ( R.drawable.cli, "العيادات", "3" ) );
-        list.add ( new wordclass ( R.drawable.x_ray, "مركز اشاعات", "4" ) );
-        list.add ( new wordclass ( R.drawable.natul, "منتجات طبيعيه", "5" ) );
+        list.add ( new wordclass ( R.drawable.gym, "منتجع صحى و صاله العاب رياضيه", "1" ) );
+        list.add ( new wordclass ( R.drawable.beautycenter, "مركز تجميل", "2" ) );
+        list.add ( new wordclass ( R.drawable.clinics, "العيادات", "3" ) );
+        list.add ( new wordclass ( R.drawable.lab, "مركز اشاعات", "4" ) );
+       // list.add ( new wordclass ( R.drawable.natul, "منتجات طبيعيه", "5" ) );
         // list.add ( new wordclass ( R.drawable.baby, "ساحه اطفال", "6" ) );
         //list.add ( new wordclass ( R.drawable.mug, "كافيتريا", "7" ) );
     }

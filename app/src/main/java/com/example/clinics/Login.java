@@ -7,75 +7,63 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
-import com.google.firebase.auth.FirebaseAuth;
+import com.backendless.Backendless;
+import com.backendless.BackendlessUser;
+import com.backendless.async.callback.AsyncCallback;
+import com.backendless.exceptions.BackendlessFault;
+
 
 public class Login extends AppCompatActivity {
-    EditText emtaxt, password;
+    EditText loginMail, loginPass;
     TextView signup, singinedit;
-    FirebaseAuth mFirebaseAuth;
-
+    ProgressBar progressBar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login );
-        mFirebaseAuth = FirebaseAuth.getInstance();
-        emtaxt = findViewById(R.id.activity_login_ed_email);
-        password = findViewById(R.id.activity_login_ed_password );
+        loginMail = findViewById(R.id.loginMail);
+        loginPass = findViewById(R.id.loginPass );
         signup = findViewById(R.id.signup);
         singinedit = findViewById(R.id.singinedit);
-        signup.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String email = emtaxt.getText().toString();
-                String pwd = password.getText().toString();
-                if (email.isEmpty()) {
-                    emtaxt.setError("please enter your email");
-                    emtaxt.requestFocus();
-                } else if (pwd.isEmpty()) {
-                    password.setError("please enter your password");
-                    password.requestFocus();
-                } else if (email.isEmpty() && pwd.isEmpty()) {
-                    Toast.makeText( Login.this, "Fieldes Are Empty!", Toast.LENGTH_LONG).show();
-                } else if (!(email.isEmpty() && pwd.isEmpty())) {
-                    mFirebaseAuth.createUserWithEmailAndPassword(email, pwd).addOnCompleteListener( Login.this, new OnCompleteListener<AuthResult>() {
-                        @Override
-                        public void onComplete(@NonNull Task<AuthResult> task) {
-                            if (!task.isSuccessful()) {
-                                Toast.makeText( Login.this, "SignUp Unsuccessful ", Toast.LENGTH_LONG).show();
+        progressBar=findViewById(R.id.progressBar);
+        Backendless.initApp(this,"23EA1D8E-4BDB-C659-FFD3-49FD03424E00","0E61FAA8-5FBD-49C8-91EF-E060161DCA95");
 
-                            } else {
-//                                startActivity(new Intent( Login.this, Home.class));
-                            }
-                        }
-                    });
-                } else {
-                    Toast.makeText( Login.this, "Error Ocurred!", Toast.LENGTH_LONG);
 
-                }
-            }
-        });
-//        signup.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent in = new Intent( Login.this, Home.class);
-//                startActivity(in);
-//            }
-//        });
-        singinedit.setOnClickListener(new View.OnClickListener() {
+
+    }
+
+
+    public void onClick(View view) {
+        String mail=loginMail.getText().toString();
+        String pass=loginPass.getText().toString();
+        Backendless.UserService.login(mail, pass, new AsyncCallback<BackendlessUser>() {
             @Override
-            public void onClick(View view) {
-                Intent in = new Intent( Login.this, Register.class);
+            public void handleResponse(BackendlessUser response) {
+                Toast.makeText(Login.this, " تم التسجيل ", Toast.LENGTH_SHORT).show();
+                progressBar.setVisibility(View.VISIBLE);
+                Intent in = new Intent( Login.this, MainActivity.class);
                 startActivity(in);
 
             }
+
+            @Override
+            public void handleFault(BackendlessFault fault) {
+                if (fault.getCode().equals("3003")) {
+                    Toast.makeText(Login.this, " بيانات غير صحيحه", Toast.LENGTH_SHORT).show();
+                }
+
+            }
         });
 
+    }
+
+    public void ok(View view) {
+        Intent in = new Intent( Login.this, Register.class);
+        startActivity(in);
     }
 }
 

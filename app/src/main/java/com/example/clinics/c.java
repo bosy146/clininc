@@ -53,7 +53,7 @@ public class c extends AppCompatActivity {
                         startActivity ( new Intent ( c.this, Eat.class ) );
                         break;
                     case 5:
-                        startActivity ( new Intent ( c.this, Bones.class ) );
+                        startActivity ( new Intent ( c.this, Bloodvessels.class ) );
                         break;
                     case 6:
                         startActivity ( new Intent ( c.this, Nose.class ) );

@@ -12,19 +12,16 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
-import com.google.firebase.auth.FirebaseAuth;
+import com.backendless.Backendless;
+import com.backendless.BackendlessUser;
+import com.backendless.async.callback.AsyncCallback;
+import com.backendless.exceptions.BackendlessFault;
 
-public class Register extends AppCompatActivity {
+
+public class Register extends AppCompatActivity implements AsyncCallback<BackendlessUser> {
     EditText nameText, phText, emText, pwText;
     TextView siedit;
-    FirebaseAuth mFirebaseAuth;
     ProgressBar progressBar;
-
-    private FirebaseAuth.AuthStateListener mAuthStateListener;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate ( savedInstanceState );
@@ -34,59 +31,41 @@ public class Register extends AppCompatActivity {
         emText = findViewById ( R.id.emtext2 );
         pwText = findViewById ( R.id.activity_register_ed_password );
         siedit = findViewById ( R.id.siedit );
+        progressBar=findViewById(R.id.progressBar);
 
-        mFirebaseAuth = FirebaseAuth.getInstance ();
-        progressBar = findViewById ( R.id.progressBar );
 
-        if (mFirebaseAuth.getCurrentUser () != null) {
-            startActivity ( new Intent ( getApplicationContext (), Login.class ) );
-            finish ();
+    }
+
+    public void sigin(View view) {
+        BackendlessUser user = new BackendlessUser();
+        user.setEmail(emText.getText().toString());
+        user.setPassword(pwText.getText().toString());
+        user.setProperty("name", nameText.getText().toString());
+        user.setProperty("phone", phText.getText().toString());
+        Backendless.UserService.register(user,this);
+    }
+
+    @Override
+    public void handleResponse(BackendlessUser response) {
+        Toast.makeText(this, " تم الحفظ ", Toast.LENGTH_SHORT).show();
+        progressBar.setVisibility(View.VISIBLE);
+        Intent in=new Intent(Register.this,Login.class);
+        startActivity(in);
+
+    }
+
+    @Override
+    public void handleFault(BackendlessFault fault) {
+
+        if (fault.getCode().equals("3033")) {
+            Toast.makeText(this, " تم التسجيل من قبل", Toast.LENGTH_SHORT).show();
         }
-        siedit.setOnClickListener ( new View.OnClickListener () {
-            @Override
-            public void onClick(View view) {
-                String email = emText.getText ().toString ().trim ();
-                String pass = pwText.getText ().toString ().trim ();
-                if (email.isEmpty ()) {
-                    emText.setError ( "please enter your email" );
-                    return;
-                }
-                if (pass.isEmpty ()) {
-                    emText.setError ( "please enter your password" );
-                    return;
-                }
-                if (pass.length () < 6) {
-                    pwText.setError ( "Password Must be >= 6 Characterr" );
-                    return;
-                }
-                progressBar.setVisibility ( View.VISIBLE );
-                // register the user in firebase
-                mFirebaseAuth.createUserWithEmailAndPassword ( email, pass ).addOnCompleteListener ( new OnCompleteListener<AuthResult> () {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful ()) {
-                            Toast.makeText ( Register.this, "User created", Toast.LENGTH_SHORT ).show ();
-                            startActivity ( new Intent ( getApplicationContext (), Login.class ) );
-                        } else {
-                            Toast.makeText ( Register.this, "Error! " + task.getException ().getMessage (), Toast.LENGTH_SHORT ).show ();
-                            Log.i ( "----------", "" + task.getException ().getMessage () );
-                        }
-
-
-                    }
-                } );
-
-
-            }
-        } );
-        siedit.setOnClickListener ( new View.OnClickListener () {
-            @Override
-            public void onClick(View view) {
-                Intent in = new Intent ( Register.this, MainActivity.class );
-                startActivity ( in );
-            }
-        } );
+        else
+            Toast.makeText(this, " خطا فى التجيل", Toast.LENGTH_SHORT).show();
     }
 }
+
+
+
 
 

@@ -16,7 +16,7 @@
         <activity android:name=".Click" />
         <activity android:name=".Head" />
         <activity android:name=".Nose" />
-        <activity android:name=".Bones" />
+        <activity android:name=".Bloodvessels" />
         <activity android:name=".Eat" />
         <activity android:name=".beauty.Beautywo" />
         <activity android:name=".Eyes" />
