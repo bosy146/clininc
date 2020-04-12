@@ -23,7 +23,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/brochure"
+                android:src="@drawable/beautycenter"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -37,7 +37,7 @@
                 android:paddingEnd="12dp"
                 android:paddingBottom="10dp"
                 android:text="Brochure"
-                android:textColor="#262626"
+                android:textColor="@color/pink1"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@id/desc"

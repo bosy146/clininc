@@ -1,6 +1,19 @@
 <resources>
-    <string name="app_name">clinics</string>
+
+    <string-array name="gym">
+        <item> اختيار </item>
+        <item> علاجات الجسم</item>
+        <item> الدفاع عن النفس</item>
+        <item>الزومبا</item>
+        <item>الساونا</item>
+        <item>المساج</item>
+        <item>الانسجام</item>
+        <item>العلاج النفسى الجسدى</item>
+        <item> مستحضرات التجميل</item>
+    </string-array>
+
     <string-array name="Days">
+        <item> اختيار اليوم</item>
         <item> السبت</item>
         <item> الاحد</item>
         <item>الاثنين</item>
@@ -21,6 +34,7 @@
 
     </string-array>
     <string-array name="hours">
+        <item> اختيار الساعه</item>
         <item> ص10</item>
         <item> ص11</item>
         <item> م12</item>

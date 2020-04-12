@@ -53,7 +53,7 @@ public class c extends AppCompatActivity {
                         startActivity ( new Intent ( c.this, Eat.class ) );
                         break;
                     case 5:
-                        startActivity ( new Intent ( c.this, Bloodvessels.class ) );
+                        startActivity ( new Intent ( c.this, Beautycli.class ) );
                         break;
                     case 6:
                         startActivity ( new Intent ( c.this, Nose.class ) );
@@ -79,9 +79,9 @@ public class c extends AppCompatActivity {
         plist.add(new postclass(R.drawable.eyes,"الرمد","من اهم العيادات"));
         plist.add(new postclass(R.drawable.woman,"النساء","من اهم العيادات"));
         plist.add(new postclass(R.drawable.eat,"التغذيه","من اهم العيادات"));
-        plist.add(new postclass(R.drawable.asab,"عظام","من اهم العيادات"));
+        plist.add(new postclass(R.drawable.beautycli,"تجميل","من اهم العيادات"));
         plist.add(new postclass(R.drawable.nose,"انف و اذن","من اهم العيادات"));
-        plist.add(new postclass(R.drawable.head,"مخ و اعصاب","من اهم العيادات"));
+        plist.add(new postclass(R.drawable.head," نفسيه و عصبيه","من اهم العيادات"));
     }
 
 }
