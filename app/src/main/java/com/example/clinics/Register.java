@@ -17,17 +17,17 @@ import com.backendless.exceptions.BackendlessFault;
 
 
 public class Register extends AppCompatActivity implements AsyncCallback<BackendlessUser> {
-    EditText nameText, phText, emText, pwText;
+    EditText emText, nameText, pwText, pwText2;
     TextView siedit;
     ProgressBar progressBar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate ( savedInstanceState );
         setContentView ( R.layout.activity_register );
-        nameText = findViewById ( R.id.activity_register_ed_name );
-        phText = findViewById ( R.id.phText );
-        emText = findViewById ( R.id.emtext2 );
-        pwText = findViewById ( R.id.activity_register_ed_password );
+        emText = findViewById ( R.id.emText );
+        nameText = findViewById ( R.id.nameText );
+        pwText = findViewById ( R.id.pwText );
+        pwText2 = findViewById ( R.id.pwText2 );
         siedit = findViewById ( R.id.siedit );
         progressBar=findViewById(R.id.progressBar);
 
@@ -39,7 +39,7 @@ public class Register extends AppCompatActivity implements AsyncCallback<Backend
         user.setEmail(emText.getText().toString());
         user.setPassword(pwText.getText().toString());
         user.setProperty("name", nameText.getText().toString());
-        user.setProperty("phone", phText.getText().toString());
+        user.setProperty("password", pwText2.getText().toString());
         Backendless.UserService.register(user,this);
     }
 
