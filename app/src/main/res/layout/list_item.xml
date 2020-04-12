@@ -46,7 +46,7 @@
             android:background="@drawable/sh_text_bg"
             android:paddingStart="6dp"
             android:paddingEnd="6dp"
-            android:paddingBottom="4dp"
+            android:paddingBottom="2dp"
             android:text="عيادات"
             android:textColor="@color/white"
             android:textSize="18sp"
