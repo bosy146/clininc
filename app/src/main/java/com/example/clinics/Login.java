@@ -40,7 +40,7 @@ public class Login extends AppCompatActivity {
 
 
     public void onClick(View view) {
-        String mail=loginMail.getText().toString();
+        final String mail=loginMail.getText().toString();
         String pass=loginPass.getText().toString();
         Backendless.UserService.login(mail, pass, new AsyncCallback<BackendlessUser>() {
             @Override

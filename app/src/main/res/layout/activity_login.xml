@@ -5,82 +5,69 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.clinics.Login">
-
     <Toolbar
         android:id="@+id/header"
         android:layout_width="match_parent"
         android:layout_height="220dp"
+        android:elevation="5dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvDeas"
+        android:text="مرحبا بك"
         android:elevation="5dp"
-        android:layoutDirection="ltr">
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="30dp"
+        android:textSize="20sp"
+        android:textColor="@color/black"/>
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-
-            <TextView
-                android:id="@+id/tvDeas"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
-                android:layout_marginTop="40dp"
-                android:elevation="5dp"
-                android:text="مرحبا بك"
-                android:textColor="@color/black"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/tvlogin"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/tvDeas"
-                android:layout_alignLeft="@+id/tvDeas"
-                android:elevation="5dp"
-                android:text="تسجيل الدخول"
-                android:textColor="@color/black"
-                android:textSize="30sp"
-                android:textStyle="bold" />
-        </RelativeLayout>
-    </Toolbar>
+    <TextView
+        android:id="@+id/tvlogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="تسجيل الدخول"
+        android:elevation="5dp"
+        android:layout_below="@+id/tvDeas"
+        android:layout_alignLeft="@+id/tvDeas"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold" />
 
     <ImageView
         android:id="@+id/circle1"
         android:layout_width="134dp"
         android:layout_height="134dp"
         android:layout_below="@+id/header"
-        android:layout_alignParentRight="true"
+        android:src="@drawable/circlet"
         android:layout_marginTop="-80dp"
-        android:layout_marginRight="-100dp"
-        android:src="@drawable/circlet" />
-
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="-100dp"/>
     <ImageView
         android:id="@+id/circle2"
         android:layout_width="134dp"
         android:layout_height="134dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginLeft="-90dp"
         android:layout_marginBottom="50dp"
-        android:src="@drawable/circlet" />
-
+        android:src="@drawable/circlet"
+        android:layout_marginLeft="-90dp"/>
     <ImageView
         android:id="@+id/circle3"
         android:layout_width="182dp"
         android:layout_height="182dp"
-        android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginRight="-80dp"
+        android:layout_alignParentRight="true"
         android:layout_marginBottom="-30dp"
-        android:src="@drawable/circle" />
-
+        android:src="@drawable/circle"
+        android:layout_marginRight="-80dp" />
     <ImageView
         android:id="@+id/circle4"
         android:layout_width="134dp"
         android:layout_height="134dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginRight="-50dp"
         android:layout_marginBottom="-50dp"
         android:layout_toLeftOf="@id/circle3"
-        android:src="@drawable/circlet" />
+        android:src="@drawable/circlet"
+        android:layout_marginRight="-50dp" />
 
     <ScrollView
         android:id="@+id/sv"
@@ -98,15 +85,14 @@
                 android:id="@+id/cv"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="20dp"
                 app:cardCornerRadius="10dp"
+                android:layout_margin="20dp"
                 app:cardElevation="2dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:paddingBottom="50dp">
+                    android:orientation="vertical">
 
 
                     <TextView
@@ -123,11 +109,9 @@
                         android:id="@+id/loginMail"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
                         android:inputType="text"
-                        android:text="@string/email" />
-
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -136,20 +120,17 @@
                         android:textColor="@color/purple"
                         android:textSize="14sp"
                         android:textStyle="bold" />
-
                     <EditText
                         android:id="@+id/loginPass"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
                         android:inputType="textPassword"
-                        android:text="@string/pass" />
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"/>
 
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
-
             <RelativeLayout
                 android:id="@+id/rr"
                 android:layout_width="wrap_content"
@@ -157,10 +138,10 @@
                 android:layout_below="@id/cv"
                 android:layout_alignLeft="@id/cv"
                 android:layout_alignRight="@id/cv"
+                android:elevation="10dp"
                 android:layout_marginLeft="35dp"
-                android:layout_marginTop="-50dp"
                 android:layout_marginRight="35dp"
-                android:elevation="10dp">
+                android:layout_marginTop="-50dp">
 
                 <Button
                     android:id="@+id/signup"
@@ -169,8 +150,7 @@
                     android:background="@drawable/bg_ui"
                     android:onClick="onClick"
                     android:text="تسجيل الدخول"
-                    android:textAllCaps="false"
-                    android:textColor="@color/white" />
+                    android:textAllCaps="false" />
 
             </RelativeLayout>
 
@@ -180,21 +160,22 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/rr"
                 android:layout_marginTop="15dp"
+                android:background="@color/white"
                 android:gravity="center"
                 android:onClick="ok"
                 android:padding="4dp"
                 android:text="انشاء حساب جديد"
                 android:textColor="@color/black" />
-
             <ProgressBar
                 android:id="@+id/progressBar"
                 style="?android:attr/progressBarStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/singinedit"
-                android:layout_centerHorizontal="true"
                 android:layout_marginBottom="53dp"
-                android:visibility="invisible" />
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
 
 
         </RelativeLayout>
