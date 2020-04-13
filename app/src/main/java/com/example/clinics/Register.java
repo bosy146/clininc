@@ -17,14 +17,14 @@ import com.backendless.exceptions.BackendlessFault;
 
 
 public class Register extends AppCompatActivity implements AsyncCallback<BackendlessUser> {
-    EditText emText, nameText, pwText, pwText2;
+    EditText emtext, nameText, pwText, pwText2;
     TextView siedit;
     ProgressBar progressBar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate ( savedInstanceState );
         setContentView ( R.layout.activity_register );
-        emText = findViewById ( R.id.emText );
+        emtext = findViewById ( R.id.emText );
         nameText = findViewById ( R.id.nameText );
         pwText = findViewById ( R.id.pwText );
         pwText2 = findViewById ( R.id.pwText2 );
@@ -36,7 +36,7 @@ public class Register extends AppCompatActivity implements AsyncCallback<Backend
 
     public void sigin(View view) {
         BackendlessUser user = new BackendlessUser();
-        user.setEmail(emText.getText().toString());
+        user.setEmail(emtext.getText().toString());
         user.setPassword(pwText.getText().toString());
         user.setProperty("name", nameText.getText().toString());
         user.setProperty("password", pwText2.getText().toString());
@@ -60,7 +60,7 @@ public class Register extends AppCompatActivity implements AsyncCallback<Backend
             Toast.makeText(this, " تم التسجيل من قبل", Toast.LENGTH_SHORT).show();
         }
         else
-            Toast.makeText(this, " خطا فى التجيل", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, " خطا فى التسجيل", Toast.LENGTH_SHORT).show();
     }
 }
 
