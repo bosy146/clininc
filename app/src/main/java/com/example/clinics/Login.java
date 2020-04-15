@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -45,6 +46,7 @@ public class Login extends AppCompatActivity {
         Backendless.UserService.login(mail, pass, new AsyncCallback<BackendlessUser>() {
             @Override
             public void handleResponse(BackendlessUser response) {
+
                 Toast.makeText(Login.this, " تم التسجيل ", Toast.LENGTH_SHORT).show();
                 progressBar.setVisibility(View.VISIBLE);
                 Intent in = new Intent( Login.this, MainActivity.class);

@@ -1,5 +1,6 @@
 package com.example.clinics;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -38,8 +39,9 @@ public class Register extends AppCompatActivity implements AsyncCallback<Backend
         BackendlessUser user = new BackendlessUser();
         user.setEmail(emtext.getText().toString());
         user.setPassword(pwText.getText().toString());
+        user.setPassword(pwText2.getText().toString());
         user.setProperty("name", nameText.getText().toString());
-        user.setProperty("password", pwText2.getText().toString());
+
         Backendless.UserService.register(user,this);
     }
 
@@ -53,6 +55,7 @@ public class Register extends AppCompatActivity implements AsyncCallback<Backend
 
     }
 
+    @SuppressLint("ResourceType")
     @Override
     public void handleFault(BackendlessFault fault) {
 

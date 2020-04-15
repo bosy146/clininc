@@ -1,32 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:title="الرئيسية">
-        <menu>
+
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="الرئيسية" />
+
+        <item
+            android:id="@+id/nav_favorite"
+            android:icon="@drawable/ic_favorite_black_24dp"
+            android:title="المفضلة" />
+
+        <item
+            android:id="@+id/nav_chat"
+            android:icon="@drawable/ic_chat_black_24dp"
+            android:title="دردشة" />
+    </group>
+    <item android:title="التطبيق" >
+        <menu >
+            <item
+                android:id="@+id/about"
+                android:icon="@drawable/ic_error_black_24dp"
+                android:title="حول التطيق" />
 
             <item
-                android:id="@+id/home"
-                android:icon="@drawable/ic_home_black_24dp"
-                android:title="الرئيسية" />
-            <item
-                android:id="@+id/another"
-                android:icon="@drawable/ic_chat_black_24dp"
-                android:title=" الدردشه" />
-        </menu>
-    </item>
-    <item android:title="حول التطبيق">
-        <menu>
-
-            <item
-                android:id="@+id/home1"
+                android:id="@+id/share"
                 android:icon="@drawable/ic_share_black_24dp"
-                android:title="تقييم التطبيق" />
-            <item
-                android:id="@+id/another1"
-                android:icon="@drawable/ic_group_add_black_24dp"
-                android:title=" مشاركه التطبيق
-" />
+                android:title="مشاركة التطبيق" />
+
         </menu>
     </item>
-
 
 </menu>

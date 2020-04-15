@@ -4,5 +4,6 @@
     <item name="pwText" type="id" />
     <item name="emText" type="id" />
     <item name="imageView" type="id" />
+    <item name="fragment_container" type="id" />
 
 </resources>

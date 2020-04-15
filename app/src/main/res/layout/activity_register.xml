@@ -11,7 +11,7 @@
     <Toolbar
         android:id="@+id/header"
         android:layout_width="match_parent"
-        android:layout_height="220dp"
+        android:layout_height="103dp"
         android:elevation="5dp" />
 
     <RelativeLayout
@@ -114,7 +114,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"
-                        android:inputType="text" />
+                        android:inputType="textEmailAddress" />
 
 
 
