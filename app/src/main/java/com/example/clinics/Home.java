@@ -83,8 +83,4 @@ public class Home extends Fragment {
         // list.add ( new wordclass ( R.drawable.baby, "ساحه اطفال", "6" ) );
         //list.add ( new wordclass ( R.drawable.mug, "كافيتريا", "7" ) );
     }
-    @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-    }
 }
