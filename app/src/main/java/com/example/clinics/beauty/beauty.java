@@ -47,12 +47,7 @@ public class beauty extends AppCompatActivity {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
                 if (position < (adapter.getCount () - 1) && position < (colors.length - 1)) {
-                    viewPager.setBackgroundColor (
-                            (Integer) argbEvaluator.evaluate
-                                    ( positionOffset,
-                                            colors[position],
-                                            colors[position + 1]
-                                    )
+                    viewPager.setBackgroundColor ( (Integer) argbEvaluator.evaluate ( positionOffset, colors[position], colors[position + 1] )
                     );
                 } else {
                     viewPager.setBackgroundColor ( colors[colors.length - 1] );
