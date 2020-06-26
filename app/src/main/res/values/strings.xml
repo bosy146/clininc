@@ -85,6 +85,9 @@
     <string name="close">close</string>
     <string name="email">bosy.refat@yahoo.com</string>
     <string name="pass">123456</string>
+    <string name="booking_now">احجز الان</string>
+    <string name="confirm_book">تاكيد الحجز</string>
+    <string name="complete_data">استكمال البيانات</string>
 
 
 </resources>

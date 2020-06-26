@@ -24,7 +24,9 @@
         <activity android:name=".dentes"></activity>
         <activity android:name=".c" />
         <activity android:name=".productsb" />
-        <activity android:name=".x_rayb" />
+        <activity android:name=".x_rayb" >
+
+        </activity>
         <activity android:name=".beauty.beautyb" />
         <activity android:name=".gym.gymb" />
         <activity android:name=".products" />
@@ -38,7 +40,6 @@
         <activity android:name=".Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
