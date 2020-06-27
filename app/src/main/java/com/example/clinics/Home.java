@@ -24,12 +24,6 @@ public class Home extends Fragment {
     private wordadapter mAdapter;
     private LinearLayoutManager mlayoutManager;
     private ArrayList<wordclass> list;
-
-
-    /// hiiiiii 3/5
-    ///bosy
-
-
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -45,11 +39,6 @@ public class Home extends Fragment {
             @Override
             public void onItemClick(int position) {
                 String list1 = list.get ( position ).getmTextV1 ();
-//                Intent in = new Intent ( Home.this, Detalis.class );
-//                in.putExtra ( "name", list1 );
-//                startActivity ( in );
-
-                // هنا هتدخلى على الصفحات حسب ال position فى ال list
                 switch (position) {
                     case 0:
                         startActivity ( new Intent ( getActivity (), gym.class ) );

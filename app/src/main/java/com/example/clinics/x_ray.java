@@ -59,7 +59,7 @@ public class x_ray extends AppCompatActivity {
         }
     }
 
-    public void bookat(View view) {
+    public void click(View view) {
         Intent in = new Intent ( this, x_rayb.class );
         startActivity ( in );
     }

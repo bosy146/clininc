@@ -7,11 +7,10 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/hear"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".ProfileFragment"></activity>
         <activity android:name=".MainActivity"></activity>
         <activity android:name=".Click" />
         <activity android:name=".Head" />
