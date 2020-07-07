@@ -30,13 +30,18 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     NavigationView navigationView;
     ActionBarDrawerToggle toggle;
     Toolbar toolbar;
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        pager=findViewById(R.id.pager);
+
+        pager=findViewById(R.id.viewPager);
         pagerAdapter=new SlidePageAdapter(getSupportFragmentManager(),this);
         pager.setAdapter(pagerAdapter);
+
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         drawer = findViewById(R.id.drawar_layout);
@@ -46,7 +51,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 .navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
+
         intiViews();
+
         // toggle = new ActionBarDrawerToggle ( this, drawer, toolbar, R.string.open, R.string.close );
         // toggle.getDrawerArrowDrawable ().setColor ( ContextCompat.getColor ( this, R.color.black ) );
         // drawer.addDrawerListener ( toggle );
@@ -54,9 +61,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         //toggle.syncState ();
         // navigationView.setNavigationItemSelectedListener ( this );
         // navigationView.bringToFront ();
+
+
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Home()).commit();
-            navigationView.setCheckedItem(R.id.nav_home); } }
+            navigationView.setCheckedItem(R.id.nav_home);
+        }
+    }
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId ()) {
@@ -77,7 +88,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 pager.setCurrentItem(3);
                 break;
             case R.id.share:
-                Toast.makeText ( this, " مشاركه التكبيق", Toast.LENGTH_SHORT ).show ();
+                Toast.makeText ( this, " مشاركه التطبيق", Toast.LENGTH_SHORT ).show ();
                 pager.setCurrentItem(4);
                 break;
             case R.id.nav_profile:
@@ -85,18 +96,35 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 pager.setCurrentItem(5);
                 break;
 
-                default: }
+
+            default:
+
+        }
         drawer.closeDrawer(GravityCompat.START);
-        return true; }
-        @Override
+        return true;
+    }
+
+    @Override
     public void onBackPressed() {
-        if (drawer.isDrawerOpen(GravityCompat.START)){
-            drawer.closeDrawer(GravityCompat.START);}
-        else {
-            super.onBackPressed();
+        int fragNumber= pager.getCurrentItem();
+        switch(fragNumber){
+            case 0:
+            break;
+            case 1:
+            case 2:
+            case 3:
+            case 4:
+            case 5:
+                pager.setCurrentItem(0);
+                break;
         }
     }
     //}
+
+
+
+
+
     public void intiViews() {
         drawer = findViewById ( R.id.drawar_layout );
         navigationView = findViewById ( R.id.nav_view );

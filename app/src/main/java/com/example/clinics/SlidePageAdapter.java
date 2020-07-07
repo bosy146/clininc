@@ -11,13 +11,16 @@ import java.util.List;
 
 public class SlidePageAdapter extends FragmentStatePagerAdapter {
     Context mContext;
-    public SlidePageAdapter(FragmentManager fm,Context context) {
+
+    public SlidePageAdapter(FragmentManager fm, Context context) {
         super(fm);
-        mContext = context; }
-        @Override
+        mContext = context;
+    }
+
+    @Override
     public Fragment getItem(int position) {
         if (position == 0) {
-            return new HomeFragment();
+            return new Home();
         } else if (position == 1) {
             return new FavFragment();
         } else if (position == 2) {
@@ -26,9 +29,10 @@ public class SlidePageAdapter extends FragmentStatePagerAdapter {
             return new AppFragment();
         } else if (position == 4) {
             return new ShareFragment();
-        } else   {
+        } else {
             return new ProfileFragment();
-        } }
+        }
+    }
 
     @Override
     public int getCount() {
