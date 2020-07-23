@@ -120,6 +120,7 @@
 
                     <EditText
                         android:id="@+id/loginMail"
+                        android:text="@string/email"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
@@ -136,6 +137,7 @@
 
                     <EditText
                         android:id="@+id/loginPass"
+                        android:text="@string/pass"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"

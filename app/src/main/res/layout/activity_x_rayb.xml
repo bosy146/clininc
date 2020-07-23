@@ -67,7 +67,7 @@
             </RelativeLayout>
 
             <Spinner
-                android:id="@+id/spinner5"
+                android:id="@+id/day_spinner"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:entries="@array/x_ray"
@@ -115,7 +115,7 @@
             </RelativeLayout>
 
             <Spinner
-                android:id="@+id/spinner6"
+                android:id="@+id/hour_spinner"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:entries="@array/Days"
