@@ -6,12 +6,6 @@
     android:layout_height="match_parent"
     tools:context="com.example.clinics.Login">
 
-    <Toolbar
-        android:id="@+id/header"
-        android:layout_width="match_parent"
-        android:layout_height="220dp"
-        android:elevation="5dp" />
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -41,6 +35,12 @@
             android:textStyle="bold" />
 
     </RelativeLayout>
+
+    <Toolbar
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:elevation="5dp" />
 
     <ImageView
         android:id="@+id/circle1"

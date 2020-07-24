@@ -68,8 +68,6 @@ public class Home extends Fragment {
         list.add ( new wordclass ( R.drawable.beautycenter, "مركز تجميل", "2" ) );
         list.add ( new wordclass ( R.drawable.clinics, "العيادات", "3" ) );
         list.add ( new wordclass ( R.drawable.lab, "مركز اشاعات", "4" ) );
-       // list.add ( new wordclass ( R.drawable.natul, "منتجات طبيعيه", "5" ) );
-        // list.add ( new wordclass ( R.drawable.baby, "ساحه اطفال", "6" ) );
-        //list.add ( new wordclass ( R.drawable.mug, "كافيتريا", "7" ) );
+
     }
 }
