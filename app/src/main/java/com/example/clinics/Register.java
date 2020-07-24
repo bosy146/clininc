@@ -21,6 +21,7 @@ public class Register extends AppCompatActivity implements AsyncCallback<Backend
     EditText emtext, nameText, pwText, pwText2;
     TextView siedit;
     ProgressBar progressBar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate ( savedInstanceState );
@@ -30,28 +31,37 @@ public class Register extends AppCompatActivity implements AsyncCallback<Backend
         pwText = findViewById ( R.id.pwText );
         pwText2 = findViewById ( R.id.pwText2 );
         siedit = findViewById ( R.id.siedit );
-        progressBar=findViewById(R.id.progressBar);
-
-
+        progressBar = findViewById ( R.id.progressBar );
     }
 
     public void sigin(View view) {
-        BackendlessUser user = new BackendlessUser();
-        user.setEmail(emtext.getText().toString());
-        user.setPassword(pwText.getText().toString());
-        user.setPassword(pwText2.getText().toString());
-        user.setProperty("name", nameText.getText().toString());
-
-        Backendless.UserService.register(user,this);
+        BackendlessUser user = new BackendlessUser ();
+        user.setEmail ( emtext.getText ().toString () );
+        user.setPassword ( pwText.getText ().toString () );
+        user.setPassword ( pwText2.getText ().toString () );
+        user.setProperty ( "name", nameText.getText ().toString () );
+        if (emtext.getText ().length () == 0) {
+            Toast.makeText ( this, "من فضلك قم بادخال البريد الالكتروني", Toast.LENGTH_SHORT ).show ();
+        } else if (nameText.getText ().length () == 0) {
+            Toast.makeText ( this, "من فضلك قم بادخال اسم المستخدم", Toast.LENGTH_SHORT ).show ();
+        } else if (pwText.getText ().length () == 0) {
+            Toast.makeText ( this, "من فضلك قم بادخال كلمة السر", Toast.LENGTH_SHORT ).show ();
+        } else if (pwText2.getText ().length () == 0) {
+            Toast.makeText ( this, "من فضلك قم بتأكيد كلمة السر", Toast.LENGTH_SHORT ).show ();
+        } else if (!pwText.getText ().toString ().equals ( pwText2.getText ().toString () )) {
+            Toast.makeText ( this, "كلمة السر ليست متشابهة", Toast.LENGTH_SHORT ).show ();
+        } else {
+            Backendless.UserService.register ( user, this );
+        }
     }
 
     @Override
     public void handleResponse(BackendlessUser response) {
-        Toast.makeText(this, " تم الحفظ ", Toast.LENGTH_SHORT).show();
-        progressBar.setVisibility(View.VISIBLE);
+        Toast.makeText ( this, " تم الحفظ ", Toast.LENGTH_SHORT ).show ();
+        progressBar.setVisibility ( View.VISIBLE );
 
-        Intent in=new Intent(Register.this,MainActivity.class);
-        startActivity(in);
+        Intent in = new Intent ( Register.this, MainActivity.class );
+        startActivity ( in );
 
     }
 
@@ -59,11 +69,10 @@ public class Register extends AppCompatActivity implements AsyncCallback<Backend
     @Override
     public void handleFault(BackendlessFault fault) {
 
-        if (fault.getCode().equals("3033")) {
-            Toast.makeText(this, " تم التسجيل من قبل", Toast.LENGTH_SHORT).show();
-        }
-        else
-            Toast.makeText(this, " خطا فى التسجيل", Toast.LENGTH_SHORT).show();
+        if (fault.getCode ().equals ( "3033" )) {
+            Toast.makeText ( this, " تم التسجيل من قبل", Toast.LENGTH_SHORT ).show ();
+        } else
+            Toast.makeText ( this, " خطا فى التسجيل", Toast.LENGTH_SHORT ).show ();
     }
 }
 

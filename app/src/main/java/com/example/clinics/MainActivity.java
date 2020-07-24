@@ -49,13 +49,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         navigationView.setNavigationItemSelectedListener(this);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string
                 .navigation_drawer_open, R.string.navigation_drawer_close);
+        toggle.getDrawerArrowDrawable ().setColor ( ContextCompat.getColor ( this, R.color.white ) );
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
         intiViews();
 
         // toggle = new ActionBarDrawerToggle ( this, drawer, toolbar, R.string.open, R.string.close );
-        // toggle.getDrawerArrowDrawable ().setColor ( ContextCompat.getColor ( this, R.color.black ) );
         // drawer.addDrawerListener ( toggle );
         // toggle.setDrawerIndicatorEnabled ( true );
         //toggle.syncState ();

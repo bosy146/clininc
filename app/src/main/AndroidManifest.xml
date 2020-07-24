@@ -10,6 +10,7 @@
         android:icon="@drawable/lab"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:label="Clinics"
         android:theme="@style/AppTheme.NoActionBar">
         <activity android:name=".MainActivity">
 
