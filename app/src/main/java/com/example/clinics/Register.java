@@ -57,7 +57,7 @@ public class Register extends AppCompatActivity implements AsyncCallback<Backend
 
     @Override
     public void handleResponse(BackendlessUser response) {
-        Toast.makeText ( this, " تم الحفظ ", Toast.LENGTH_SHORT ).show ();
+        Toast.makeText ( this, " تم الحفظ :", Toast.LENGTH_SHORT ).show ();
         progressBar.setVisibility ( View.VISIBLE );
 
         Intent in = new Intent ( Register.this, MainActivity.class );
